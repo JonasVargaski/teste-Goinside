@@ -30,9 +30,36 @@ export default function Shopping() {
       {loading ? (
         <span>Carregando...</span>
       ) : (
-        products.map(product => (
-          <Product key={String(product.id)} product={product} />
-        ))
+        <table>
+          <thead>
+            <tr>
+              <td>id</td>
+              <td>marca</td>
+              <td>sabor</td>
+              <td>quantidade</td>
+              <td>valor</td>
+              <td>total</td>
+              <td>Ações</td>
+            </tr>
+          </thead>
+          <tbody>
+            {
+            products.map(product => (
+              <tr key={product.id} onClick={()=> dispatch({type: 'ADD_ITEM_TO_CART', payload: product})}>
+                <td>{product.id}</td>
+                <td>{product.marca}</td>
+                <td>{product.sabor}</td>
+                <td>{product.quantidade}</td>
+                <td>{product.valor}</td>
+                <td>0,00</td>
+                <td>
+                  <button onClick={()=> dispatch({type: 'REMOVE_ITEM_TO_CART', payload: product.id})}>Remover</button>
+                </td>
+             </tr>
+           ))
+          }
+          </tbody>
+        </table>
       )}
     </Container>
   );

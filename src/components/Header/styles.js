@@ -18,6 +18,7 @@ export const Logo = styled(Link)`
   img {
     display: block;
     height: 32px;
+    width: 126px;
   }
   strong {
     color: #fff;

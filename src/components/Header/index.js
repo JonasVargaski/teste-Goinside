@@ -2,6 +2,7 @@ import React from 'react';
 import { MdShoppingCart } from 'react-icons/md';
 import useContextStore from '../../store';
 
+import LogoPNG from '../../assets/logo.png'
 import { Container, Cart, Logo } from './styles';
 
 export default function Header() {
@@ -13,7 +14,7 @@ export default function Header() {
     <Container>
       <Logo to="/">
         <img
-          src="https://goinside.co/wp-content/uploads/sites/5/2018/03/goinside-logo-header.png"
+          src={LogoPNG}
           alt="logo"
         />
         <strong>Shop</strong>

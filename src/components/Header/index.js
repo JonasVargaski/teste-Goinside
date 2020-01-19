@@ -2,7 +2,7 @@ import React from 'react';
 import { MdShoppingCart } from 'react-icons/md';
 import useContextStore from '../../store';
 
-import LogoPNG from '../../assets/logo.png'
+import LogoPNG from '../../assets/logo.png';
 import { Container, Cart, Logo } from './styles';
 
 export default function Header() {
@@ -13,14 +13,11 @@ export default function Header() {
   return (
     <Container>
       <Logo to="/">
-        <img
-          src={LogoPNG}
-          alt="logo"
-        />
+        <img src={LogoPNG} alt="logo" />
         <strong>Shop</strong>
       </Logo>
 
-      <Cart to="/cart">
+      <Cart to="/">
         <div>
           <strong>Meu Carrinho</strong>
           <span>{cart.length} items</span>

@@ -12,4 +12,5 @@ export const Container = styled.main`
   grid-area: 'main';
   display: flex;
   flex: 1;
+  overflow: auto;
 `;

@@ -1,30 +1,53 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.header`
   grid-area: 'header';
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: #ef9e07;
-  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #333333;
 `;
 
-export const BoxSearch = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 350px;
-
-  > strong {
-    color: #fff;
-    font-weight: bold;
-    font-size: 28px;
+export const Logo = styled(Link)`
+  position: relative;
+  margin-bottom: 3px;
+  cursor: pointer;
+  img {
+    display: block;
+    height: 32px;
+    width: 126px;
   }
+  strong {
+    color: #fff;
+    position: absolute;
+    top: 21px;
+    right: 3px;
+  }
+`;
 
-  > span {
-    color: #fbfbfb;
-    font-size: 16px;
+export const Cart = styled(Link)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.2s;
+  &:hover {
+    opacity: 0.85;
+  }
+  div {
+    text-align: right;
+    margin-right: 10px;
+  }
+  strong {
+    color: #e4e4e4;
+    display: block;
+    color: #fff;
+    line-height: 14px;
+  }
+  span {
+    font-size: 12px;
+    color: #efefef;
   }
 `;

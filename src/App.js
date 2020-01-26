@@ -1,19 +1,21 @@
 import React from 'react';
+import { Router } from 'react-router-dom';
+import history from './services/history';
 
 import GlobalStyle from './styles/global';
-import DefaultLayout from './pages/_layouts/default';
-import StoclItems from './pages/StockItems';
-import AppContext from './store/provider';
+import Routes from './routes';
+import ShoppingContext from './store/provider';
 
 export default function App() {
   return (
     <>
       <GlobalStyle />
-      <AppContext>
-        <DefaultLayout>
-          <StoclItems />
-        </DefaultLayout>
-      </AppContext>
+
+      <Router history={history}>
+        <ShoppingContext>
+          <Routes />
+        </ShoppingContext>
+      </Router>
     </>
   );
 }

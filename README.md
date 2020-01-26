@@ -1,27 +1,24 @@
 ## Desafio Frontend React
 
-A principal função da aplicação consiste em consultar o webservice do PunkAPI (https://punkapi.com/documentation/v2) para listar a coleção de cervejas retornados pelo endpoint.
+A principal função da aplicação consiste em consultar o webservice do ADSim (https://api.adsim.co/crm/api/v1/refrigerante/listar) para listar os refrigerantes retornados pelo endpoint.
 
-	Realizar a leitura de dados da api, apresentar essa lista e mostrar os detalhes do objeto ao selecioná-lo..
-	Ter uma forma de paginação (Carregar conforme o usuário vai "scrollar" ou algo como um carregar mais).
-	Mostrar as informações básicas da cerveja na lista.
-	Ser possível clicar em uma cerveja e ver detalhes dela.
-
-	A tecnologia utilizada fica por sua conta, pode usar a linguagem e o framework que você se sinta melhor
+	Com o resultado do webserver você deve preencher o combobox refrigerante.
+	Ao selecionar um refrigerante no combobox, o campo preço deve ser preenchido com o preço do refrigerante selecionado.
+	Os campos totalizadores, precisam funcionar e considerar a quantidade de refrigerantes.
+	Bônus: É possível adicionar uma novas linhas dinamicamente, com o mesmo comportamento descrito acima?
 
 ### Tecnologias utilizadas
 - HTML5
 - CSS3
 - JavaScript
 - Styled Components
-- Axios
 - React ([Create React App](https://facebook.github.io/create-react-app/ "Create React App"))
 
 ### Pré-requisitos
 - [Node.js](https://nodejs.org "Node.js") >= 8.10 instalado
 
 ### Como executar
-Para executar a aplicação em ambiente local, clone este repositório, abra o diretório do projeto no terminal e execute os comandos:
+Para executar a aplicação em ambiente local, clone este repositório, abra o diretório do projeto no terminal e execute os seguintes comandos:
 
 ##### Instalar dependências do projeto:
 ```sh

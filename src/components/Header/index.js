@@ -1,29 +1,27 @@
 import React from 'react';
-import { MdShoppingCart } from 'react-icons/md';
-import useContextStore from '../../store';
+import useAppContext from '../../store';
 
-import LogoPNG from '../../assets/logo.png';
-import { Container, Cart, Logo } from './styles';
+import Search from '../Search';
+import { Container, BoxSearch } from './styles';
 
 export default function Header() {
-  const {
-    store: { cart },
-  } = useContextStore();
+  const { dispatch } = useAppContext();
+
+  function handleSearch(text) {
+    dispatch({ type: 'SET_SEARCH_TEXT', payload: text });
+  }
 
   return (
     <Container>
-      <Logo to="/">
-        <img src={LogoPNG} alt="logo" />
-        <strong>Shop</strong>
-      </Logo>
-
-      <Cart to="/">
-        <div>
-          <strong>Meu Carrinho</strong>
-          <span>{cart.length} items</span>
-        </div>
-        <MdShoppingCart size={35} color="#FFF" />
-      </Cart>
+      <BoxSearch>
+        <strong>Bank of Beers</strong>
+        <span>Find your favourite beer here</span>
+        <Search
+          debounce={1000}
+          onChange={handleSearch}
+          placeholder="Search for beer name"
+        />
+      </BoxSearch>
     </Container>
   );
 }

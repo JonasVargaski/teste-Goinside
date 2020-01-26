@@ -22,7 +22,7 @@ body,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  background: #e5e6f0;
+  background-color: #d8d7d7;
   overflow: auto;
   overscroll-behavior: contain !important;
 }
@@ -48,4 +48,10 @@ body,
   &::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   }
+
+  .modal-blur{
+  transition: 0.3s filter ease;
+  filter: blur(5px) grayscale(0.7);
+  overflow: hidden;
+}
 }`;

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import shoppingContext from './context';
+import appContext from './context';
 
-export default function useContextStore() {
-  return useContext(shoppingContext);
+export default function useAppContext() {
+  return useContext(appContext);
 }

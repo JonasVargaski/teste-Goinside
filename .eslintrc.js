@@ -24,6 +24,7 @@ module.exports = {
     "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     "react/jsx-one-expression-per-line": "off",
     "react/prop-types": ["error", { "ignore": ["children"] }],
+    "react/jsx-props-no-spreading": 'off',
     "global-require": "off",
     "camelcase": "off",
   },

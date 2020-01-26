@@ -18,7 +18,7 @@ A principal função da aplicação consiste em consultar o webservice do ADSim 
 - [Node.js](https://nodejs.org "Node.js") >= 8.10 instalado
 
 ### Como executar
-Para executar a aplicação em ambiente local, clone este repositório, abra o diretório do projeto no terminal e execute os seguintes comandos:
+Para executar a aplicação em ambiente local, clone este repositório, abra o diretório do projeto no terminal e execute os comandos:
 
 ##### Instalar dependências do projeto:
 ```sh
